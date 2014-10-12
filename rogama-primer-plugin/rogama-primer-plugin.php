@@ -11,7 +11,7 @@ Author URI: http://www.rogamainformatica.es
 /**
  * Adds Foo_Widget widget.
  */
-class PrimerPLugin extends WP_Widget {
+class PrimerPlugin extends WP_Widget {
 
 	/**
 	 * Register widget with WordPress.
@@ -19,7 +19,7 @@ class PrimerPLugin extends WP_Widget {
 	function __construct() {
 		parent::__construct(
 			'mi_primer_plugin', // Base ID
-			__('Widget Title', 'text_domain'), // Name
+			__('Titulo del Widget', 'text_domain'), // Name
 			array( 'description' => __( 'Mi primer Widget', 'text_domain' ), ) // Args
 		);
 	}
@@ -85,7 +85,7 @@ class PrimerPLugin extends WP_Widget {
 
 
 // register Foo_Widget widget
-function register_foo_widget() {
-    register_widget( 'mi_primer_plugin' );
+function register_primer_plugin() {
+    register_widget( 'PrimerPlugin' );
 }
-add_action( 'widgets_init', 'register_mi_primer_plugin' );
+add_action( 'widgets_init', 'register_primer_plugin' );
