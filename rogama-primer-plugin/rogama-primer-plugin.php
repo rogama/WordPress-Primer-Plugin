@@ -82,3 +82,10 @@ class PrimerPLugin extends WP_Widget {
 	}
 
 } // class Foo_Widget
+
+
+// register Foo_Widget widget
+function register_foo_widget() {
+    register_widget( 'mi_primer_plugin' );
+}
+add_action( 'widgets_init', 'register_mi_primer_plugin' );
